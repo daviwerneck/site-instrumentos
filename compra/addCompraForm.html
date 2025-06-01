@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href ="bootstrap/css/bootstrap.css" rel ="stylesheet" >
+    <script src ="bootstrap/js/popper.min.js "> </script>
+    <script src ="bootstrap/js/bootstrap.js "> </script>
+    <script src ="bootstrap/js/jquery.min.js"> </script>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+
+    <form action="addCompra.php" method="post">
+        <label for="produto">Produto:</label>
+        <input type="select" id="produto_id" name="produto" required>
+
+        <label for="usuario">Usuário:</label>
+        <input type="select" id="usuario_id" name="usuario_id" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
