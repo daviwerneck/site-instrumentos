@@ -47,8 +47,8 @@ $stmt->execute();
           <td><?php echo $user['telefone']; ?></td>
           <td><?php echo converteData($user['dataNascimento']); ?></td>
           <td>
-            <a href="form-edit.php?id=<?php echo $user['id']; ?>" class="btn btn-primary">Editar</a>
-            <a href="deletar.php?id=<?php echo $user['id']; ?>" onclick="return confirm('Tem certeza de que deseja remover?');" class="btn btn-danger">Remover</a>
+            <a href="editUsuario.php?id=<?php echo $user['id']; ?>" class="btn btn-primary">Editar</a>
+            <a href="deleteUsuario.php?id=<?php echo $user['id']; ?>" onclick="return confirm('Tem certeza de que deseja remover?');" class="btn btn-danger">Remover</a>
           </td>
         </tr>
         <?php endwhile; ?>
