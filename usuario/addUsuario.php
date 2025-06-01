@@ -9,7 +9,7 @@ $telefone = $_POST['telefone'];
 $dataNascimento = $_POST['dataNascimento'];
 
 $PDO = db_connect();
-$sql = "INSERT INTO usuarios (cpf, nome, email, endereco, telefone, dataNascimento) 
+$sql = "INSERT INTO Usuario (cpf, nome, email, endereco, telefone, dataNascimento) 
         VALUES (:cpf, :nome, :email, :endereco, :telefone, :dataNascimento)";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':cpf', $cpf);
@@ -17,10 +17,10 @@ $stmt->bindParam(':nome', $nome);
 $stmt->bindParam(':email', $email);
 $stmt->bindParam(':endereco', $endereco);
 $stmt->bindParam(':telefone', $telefone);
-$stmt->binfParam(':dataNascimento', $dataNascimento);
+$stmt->bindParam(':dataNascimento', $dataNascimento);
 
 if ($stmt->execute()) {
-    header('Location: exibir.php');
+    header('Location: exibirUsuario.php');
     exit;
 } else {
     echo "Erro ao cadastrar";
