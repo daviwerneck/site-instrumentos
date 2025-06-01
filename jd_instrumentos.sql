@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Produto` (
   `marca` VARCHAR(20) NULL,
   `nome` VARCHAR(50) NULL,
   `tipo` VARCHAR(50) NULL,
-  `descricao` VARCHAR(45) NULL,
+  `descricao` VARCHAR(200) NULL,
   PRIMARY KEY (`id_produto`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = gb18030;
