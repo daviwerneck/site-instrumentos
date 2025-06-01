@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.min.css">
-    <script src =" bootstrap/ js / popper . min. js " > </script>
-    <script src =" bootstrap/ js / bootstrap. js " > </script>
-    <script src =" bootstrap/ js / jquery . min. js " > </script>
-    <script type =" text / javascript">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <script src ="bootstrap/js/popper.min.js"></script>
+    <script src ="bootstrap/js/bootstrap.js "></script>
+    <script src ="bootstrap/js/jquery.min.js"></script>
+    <script type ="text/javascript">
         $(document).ready(function(){
             $(function(){
-                $("#menu").load("navbar.html");
+                $("#menu").load("navbar.html", function(response, status, xhr) {
+                    if (status == "error") {
+                        console.log("Sorry but there was an error: " + response);
+                    }
+                    else {
+                        console.log("Menu loaded successfully.");
+                    }
+                });
             });
         });
-</script>
+    </script>
     <title>Document</title>
 </head>
 <body>
         <div class="container">
             <div id="menu"></div>
+            <div class="jumbotron mt-4">
+                <h1 class="display-4">Controle do Banco de Dados</h1>
+                <p class="lead">Boas-vindas ao sistema responsável pelo controle do banco de dados da JD Instrumentos</p>
+                <hr class="my-4">
+                <p>O menu no topo poderá ser utilizado para a sua navegação no sistema!</p>
+            </div>
         </div>
 </body>
 </html>
